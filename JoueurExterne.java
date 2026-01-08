@@ -43,8 +43,8 @@ public class JoueurExterne {
         this.moveFactory = new MoveFactory(board, ruleController, players, true);
 
         // IA Minimax avec évaluateur par phases BALANCED
-        int depthStrong = 6;
-        long timeLimitMsStrong = 1000L; // 1 seconde max par coup (l'arbitre a 3s de timeout)
+        int depthStrong = 10;
+        long timeLimitMsStrong = 2000L; // 2 secondes max par coup (l'arbitre a 3s de timeout)
         this.ai = new MinimaxPlayerController(
             new PhaseEvaluator(PhaseEvaluator.PhaseProfile.BALANCED),
             depthStrong,
